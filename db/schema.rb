@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_26_164046) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_27_160827) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +22,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_26_164046) do
     t.bigint "tank_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status", default: "en attente"
     t.index ["tank_id"], name: "index_reservations_on_tank_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
@@ -32,10 +33,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_26_164046) do
     t.float "price"
     t.integer "rating"
     t.text "description"
-    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_tanks_on_user_id"
+    t.bigint "owner_id"
+    t.index ["owner_id"], name: "index_tanks_on_owner_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -54,5 +55,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_26_164046) do
 
   add_foreign_key "reservations", "tanks"
   add_foreign_key "reservations", "users"
-  add_foreign_key "tanks", "users"
+  add_foreign_key "tanks", "users", column: "owner_id"
 end
