@@ -5,6 +5,7 @@ class TanksController < ApplicationController
 
   def show
     @tank = Tank.find(params[:id])
+    @reservation = Reservation.new
   end
 
   def new
