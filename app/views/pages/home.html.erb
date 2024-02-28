@@ -6,14 +6,13 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-2">
-        <img src="White_and_Gold_Vintage_Monogram_Logo-removebg-preview.png" alt="Logo" class="img-fluid">
+      <%# <%= image_tag "logo2.png" %> %>
       </div>
       <div class="col-8 text-center">
         <h3>Tanks</h3>
         <h3>Chars</h3>
       </div>
       <div class="col-2 text-end">
-        <img src="White_and_Gold_Vintage_Monogram_Logo-removebg-preview.png" alt="Profil" class="img-fluid">
       </div>
     </div>
 
@@ -24,7 +23,7 @@
         <div class="card">
           <img src="/path/to/your/product1.jpg" class="card-img-top" alt="Product 1">
           <div class="card-body">
-            <h5 class="card-title">Nom du produit 1</h5>
+            <h5 class="card-title"><%= @tanks.name %></h5>
             <p class="card-text">Description du produit 1</p>
             <p class="card-text">Note du produit 1</p>
             <p class="card-text">Prix du produit 1</p>
@@ -45,7 +44,7 @@
         </div>
       </div>
 
-   
+
       <div class="col-4">
         <div class="card">
           <img src="/path/to/your/product3.jpg" class="card-img-top" alt="Product 3">
