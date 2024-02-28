@@ -1,0 +1,7 @@
+<h1>Tanks</h1>
+
+<ul>
+  <% @tanks.each do |tank| %>
+    <li><%= link_to tank.name, tank_path(tank) %></li>
+  <% end %>
+</ul>
