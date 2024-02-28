@@ -2,6 +2,6 @@
 
 <ul>
   <% @tanks.each do |tank| %>
-    <li><%= tank.user %></li>
+    <li><%= link_to tank.name, tank_path(tank) %></li>
   <% end %>
 </ul>

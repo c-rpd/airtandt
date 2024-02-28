@@ -30,7 +30,7 @@ tank4.save!
 user5 = User.new(first_name: "Isabella", last_name: "Garcia", email: "coqergxucou@gmail.com", password: "123rrrrrr456AZ")
 user5.save!
 
-tank5 = Tank.new(owner: user5, name: "Type 99", category: "Main Battle Tank", price: 9500000, rating: 4, description: "Le Type 99 est un char de combat principal chinois, célèbre pour ses capacités technologiques avancées et sa modernité.", created_at: DateTime.parse("2016-07-08"), picture:)
+tank5 = Tank.new(owner: user5, name: "Type 99", category: "Main Battle Tank", price: 9500000, rating: 4, description: "Le Type 99 est un char de combat principal chinois, célèbre pour ses capacités technologiques avancées et sa modernité.", created_at: DateTime.parse("2016-07-08"), picture:"https://images03.military.com/sites/default/files/styles/full/public/2018-12/panzermkiv1200.jpg")
 tank5.save!
 
 user6 = User.new(first_name: "Gabriel", last_name: "Lopez", email: "cousqetgvdsfcou@gmail.com", password: "123tttttt456AZ")
