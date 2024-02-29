@@ -3,6 +3,6 @@ class PagesController < ApplicationController
 
   def home
     all_tanks = Tank.all
-    @tanks = all_tanks.take(6)
+    @tanks = all_tanks.take(3)
   end
 end
