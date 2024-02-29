@@ -5,10 +5,13 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(reservation_params)
-    if @reservation.save
-      redirect_to reservation_path(@reservation)
+    @reservation.user = current_user
+    @tank = Tank.find(params[:tank_id])
+    @reservation.tank = @tank
+    if @reservation.save!
+      redirect_to profil_path
     else
-      render :new, :unprocessable_entity
+      render "tanks/show", status: :unprocessable_entity
     end
   end
 
