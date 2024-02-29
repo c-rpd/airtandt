@@ -1,10 +1,7 @@
 <div class="row">
-    <div data-controller="toggle" class="mt-5">
-      <button class="btn btn-outline-primary">Réserver !!</button>
-        <%= simple_form_for [tank, reservation] do |f| %>
-          <%= f.input :start_date %>
-          <%= f.input :end_date %>
-          <%= f.submit %>
-        <% end %>
-      </div>
-  </div>
+  <%= simple_form_for [tank, reservation] do |f| %>
+    <%= f.input :end_date %>
+    <%= f.input :start_date %>
+    <%= f.submit value: "Réserver", class: "btn btn-primary"%>
+  <% end %>
+</div>
