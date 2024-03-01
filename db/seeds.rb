@@ -86,4 +86,4 @@ tank20 = Tank.new(owner: user3, name: "K9 Thunder", category: "Self-Propelled Ho
 tank20.save!
 
 Reservation.create(user: user1, tank: tank20)
-Reservation.create(user: user2, tank: tank1)
+Reservation.create(user: user3, tank: tank1)

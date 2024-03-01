@@ -17,9 +17,9 @@
               <%= image_tag tank.picture, class: "card-img w-100 h-100 object-fit-cover rounded-top" %>
             </div>
             <div class="col-sm-6">
-              <h5><strong><%= tank.name %></strong></h5>
+              <h5 class="mt-3"><strong><%= tank.name %></strong></h5>
               <p><%= tank.description %></p>
-              <p><%= tank.price %>$</p>
+              <p><%= tank.price %>€</p>
             </div>
           </div>
         </div>
@@ -42,13 +42,15 @@
             <div class="col-sm-6">
               <h5 class="mt-3"><strong><%= reservation.tank.name %></strong></h5>
               <p><%= reservation.tank.description %></p>
-              <p><%= reservation.tank.price %>$</p>
+              <p><%= reservation.tank.price %>€</p>
                <% if reservation.status == "en attente" %>
-                <p class="btn btn-primary">Reservation en attente...</p>
+                <p class="btn btn-primary">Réservation en attente...</p>
               <% elsif  reservation.status == "Accepter" %>
-                <p class="btn btn-success">Reservation accepter !</p>
+                <p class="btn btn-success">Réservation acceptée !</p>
+                <p>01/03/2024</p>
               <% elsif  reservation.status == "Refuser" %>
-                <p class="btn btn-danger">Reservation refusée !</p>
+                <p class="btn btn-danger">Réservation refusée !</p>
+                <p>01/03/2024</p>
               <% end %>
             </div>
           </div>
@@ -71,14 +73,16 @@
             </div>
             <div class="col-sm-6">
               <h5 class="mt-3"><strong><%= reservation.tank.name %></strong></h5>
-              <p><%= reservation.tank.price %>$</p>
+              <p><%= reservation.tank.price %>€</p>
               <% if reservation.status == "en attente" %>
                 <%= button_to 'Accepter', accept_owner_tank_reservation_path(reservation.tank, reservation), method: :patch, class: "btn btn-success mb-2" %>
                 <%= button_to 'Refuser', decline_owner_tank_reservation_path(reservation.tank, reservation), method: :patch, class: "btn btn-danger mt-2" %>
               <% elsif  reservation.status == "Accepter" %>
-                <p class="btn btn-success">Réservation accepter !</p>
+                <p class="btn btn-success">Vous avez acceptée la réservation !</p>
+                <p>01/03/2024</p>
               <% elsif  reservation.status == "Refuser" %>
-                <p class="btn btn-danger">Réservation refusée !</p>
+                <p class="btn btn-danger">Vous avez refusée la réservation !</p>
+                <p>01/03/2024</p>
               <% end %>
 
             </div>
