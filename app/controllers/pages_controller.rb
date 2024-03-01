@@ -4,8 +4,8 @@ class PagesController < ApplicationController
   def profil
     @user = current_user
     @tanks = current_user.tanks
-    @reserved_tanks = current_user.reserved_tanks
-    @requested_tanks = Reservation.where(owner: current_user)
+    @my_reservations = Reservation.where(user: current_user)
+    @reservations_to_me = Reservation.joins(:tank).where(tank: { owner: @user })
   end
 
   def home
