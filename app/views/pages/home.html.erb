@@ -1,6 +1,8 @@
 <div class="custom-background"></div>
 <div class="text-center taille-btn">
-  <%= link_to "voir tout nos tanks", tanks_path(@tanks), class: "btn btn-dark mt-5 mx-auto"%>
+  <%= link_to tanks_path(@tanks), class: "btn btn-dark mt-5 mx-auto" do%>
+  <h1>voir tous nos tanks</h1>
+  <% end %>
 </div>
 
 <div class="container-fluid mt-4">
