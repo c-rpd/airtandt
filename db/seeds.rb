@@ -4,7 +4,7 @@ Tank.destroy_all
 User.destroy_all
 
 puts 'Create Tanks & User'
-user1 = User.new(first_name: "léopold", last_name: "leclercq", email: "coucoljhuhkjjjju@gmail.com", password: "123456")
+user1 = User.new(first_name: "léopold", last_name: "leclercq", email: "jmlestanks@gmail.com", password: "123456")
 user1.save!
 
 tank1 = Tank.new(owner: user1, name: "M1 Abrams", category: "Main Battle Tank", price: 8000000, rating: 4, description: "Le M1 Abrams est un char de combat principal américain, largement utilisé dans les forces armées des États-Unis et d'autres pays.", created_at: DateTime.parse("2000-01-01"), picture:"https://media.npr.org/assets/img/2023/01/25/abrams-tank---1-25-23-gettyimages-1426175031_custom-0c2fdc00fbbfb430794e683d15ae0c302e94e43f.jpg")
@@ -16,7 +16,7 @@ user2.save!
 tank2 = Tank.new(owner: user2, name: "Leopard 2", category: "Main Battle Tank", price: 9000000, rating: 4, description: "Le Leopard 2 est un char de combat principal allemand, utilisé par plusieurs armées à travers le monde.", created_at: DateTime.parse("2005-02-15"), picture:"https://media.istockphoto.com/id/1477683654/fr/photo/char-de-combat-principal-dans-le-vaste-champ-ouvert.jpg?s=612x612&w=0&k=20&c=ldhglkLfnUIUc8nhL41IC3ywYpm5ianvCXsZd0-j09Y=")
 tank2.save!
 
-user3 = User.new(first_name: "Sophie", last_name: "Martin", email: "coucskenfou@gmail.com", password: "123456")
+user3 = User.new(first_name: "Sophie", last_name: "Martin", email: "jaidestanks@gmail.com", password: "123456")
 user3.save!
 
 tank3 = Tank.new(owner: user3, name: "Challenger 2", category: "Main Battle Tank", price: 8500000, rating: 4, description: "Le Challenger 2 est un char de combat principal britannique, réputé pour sa protection et sa puissance de feu.", created_at: DateTime.parse("2012-03-10"), picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZJmpRJM3bmjh35G_cBBqWFWNcCFr4rHRloQ&usqp=CAU")
@@ -35,7 +35,7 @@ tank6 = Tank.new(owner: user3, name: "Merkava IV", category: "Main Battle Tank",
 tank6.save
 
 
-tank7 = Tank.new(owner: user2, name: "K2 Black Panther", category: "Main Battle Tank", price: 9200000, rating: 4, description: "Le K2 Black Panther est un char de combat principal sud-coréen, reconnu pour sa technologie avancée et ses performances exceptionnelles.", created_at: DateTime.parse("2021-11-30"), picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjIX587EjglwXyBw6nG_0FyepgVk66WUdy8g&usqp=CAU")
+tank7 = Tank.new(owner: user3, name: "K2 Black Panther", category: "Main Battle Tank", price: 9200000, rating: 4, description: "Le K2 Black Panther est un char de combat principal sud-coréen, reconnu pour sa technologie avancée et ses performances exceptionnelles.", created_at: DateTime.parse("2021-11-30"), picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjIX587EjglwXyBw6nG_0FyepgVk66WUdy8g&usqp=CAU")
 tank7.save
 
 
@@ -76,7 +76,7 @@ tank16.save!
 tank17 = Tank.new(owner: user3, name: "Type 99A", category: "Main Battle Tank", price: 9700000, rating: 4, description: "Le Type 99A est une version améliorée du char de combat principal japonais, avec des caractéristiques avancées en termes de mobilité et d'électronique.", created_at: DateTime.parse("2023-12-15"), picture:"https://images03.military.com/sites/default/files/styles/full/public/2018-12/panzermkiv1200.jpg")
 tank17.save!
 
-tank18 = Tank.new(owner: user3, name: "Armata T-15", category: "Infantry Fighting Vehicle", price: 7500000, rating: 4, description: "L'Armata T-15 est un véhicule de combat d'infanterie russe, conçu pour fournir un appui aux troupes d'infanterie avec des capacités avancées.", created_at: DateTime.parse("2021-06-28"), picture:"https://media.gettyimages.com/id/624984800/fr/photo/panzer.jpg?s=612x612&w=gi&k=20&c=SSM9NsgpNWR3UZt8tNCJfUd9CUTm20crZXLqXuzOisU=")
+tank18 = Tank.new(owner: user3, name: "Armata T-15", category: "Infantry Fighting Vehicle", price: 7500000, rating: 4, description: "L'Armata T-15 est un véhicule de combat d'infanterie russe, conçu pour fournir un appui aux troupes d'infanterie avec des capacités avancées.", created_at: DateTime.parse("2021-06-28"), picture:"https://herofactory.sk/wp-content/uploads/2020/07/mini-tank-bratislava.jpg")
 tank18.save!
 
 tank19 = Tank.new(owner: user3, name: "Arjun Mk III", category: "Main Battle Tank", price: 10000000, rating: 4, description: "L'Arjun Mk III est la dernière version du char de combat principal indien, doté de caractéristiques améliorées en termes de puissance de feu et de mobilité.", created_at: DateTime.parse("2023-03-09"), picture:"https://media.istockphoto.com/id/458804963/fr/photo/1-v-d%C3%A9bardeur-l%C3%A9opard.jpg?s=612x612&w=0&k=20&c=cEm2mm6gVic8Y2Y0zuT81XAKfvqyTc1JloybDXiGykw=")

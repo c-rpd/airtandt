@@ -1,8 +1,8 @@
 <div class="btn-retour">
-  <%= link_to "Liste des Tanks", tanks_path, class: "btn-retour"%>
+  <%= link_to "Liste des Tanks", tanks_path, class: "btn-retour btn btn-warning my-2 mx-2"%>
 </div>
-<div class="px-5">
-  <h2><%= @tank.name %></h2>
+<div class="d-flex justify-content-center my-4">
+  <h2><strong><%= @tank.name %></strong></h2>
 </div>
 
 <div class="container">
@@ -11,6 +11,10 @@
       <div class="row" >
         <%= image_tag @tank.picture, width: 100, class: "round-image" %>
       </div>
+
+    </div>
+
+    <div class="col-sm-6">
       <div class="row my-2">
       <h3><%= @tank.category %></h3>
       </div>
@@ -20,13 +24,12 @@
       <div class="row my-2">
         <i class="fa-solid fa-star"><%= @tank.rating %></i>
       </div>
-      <div class="price">
+      <div class="price my-4">
         <p><%= @tank.price %>€/mois</p>
       </div>
-    </div>
-
-    <div class="col-sm-6">
-      <%= render "form", tank: @tank, reservation: @reservation %>
+      <div class="row my-5">
+        <%= render "form", tank: @tank, reservation: @reservation %>
+      </div>
     </div>
   </div>
 </div>
