@@ -3,13 +3,12 @@ class Owner::ReservationsController < ApplicationController
 
   def accept
     @reservation.update(status: "Accepter")
-    redirect_to tanks_path
-
+    redirect_to profil_path
   end
 
   def decline
     @reservation.update(status: "Refuser")
-    redirect_to tanks_path
+    redirect_to profil_path
   end
 
   private
