@@ -56,6 +56,9 @@ body, h1, h2, h3 {
 }
 
 .taille-gif {
-  width: 300px; /* ou une autre valeur */
-  height: auto; /* pour maintenir les proportions originales */
+  width: 300px;
+  height: auto;
+}
+.taille-btn a.btn {
+  font-size: 50px;
 }
