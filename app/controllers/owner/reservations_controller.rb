@@ -4,6 +4,7 @@ class Owner::ReservationsController < ApplicationController
   def accept
     @reservation.update(status: "Accepter")
     redirect_to tanks_path
+
   end
 
   def decline
